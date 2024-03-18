@@ -1,0 +1,9 @@
+{
+  "build": {
+    "env": {
+      "ZOLA_VERSION": "0.17.2"
+    },
+    "trailingSlash": true,
+    "cleanUrls": true
+  }
+}
