@@ -21,5 +21,5 @@ The deal for me is this: start small. You don't have to build [a compiler in Web
 
 ## Check out the latest blog posts:
 
-- [Hello Y'all](./blog/2024-03-17-hello-yall)
-- [gURL CLI](./blog/2024-03-24-gurl-cli)
+- [Hello Y'all](./blog/hello-yall/)
+- [gURL CLI](./blog/gurl-cli)
