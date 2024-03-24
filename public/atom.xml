@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title></title>
+    <link rel="self" type="application/atom+xml" href="https://tiff.engineer/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://tiff.engineer"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-03-24T00:00:00+00:00</updated>
+    <id>https://tiff.engineer/atom.xml</id>
+    <entry xml:lang="en">
+        <title>gURL: A cURL Wrapper Written in Go</title>
+        <published>2024-03-24T00:00:00+00:00</published>
+        <updated>2024-03-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tiff.engineer/blog/gurl-cli/"/>
+        <id>https://tiff.engineer/blog/gurl-cli/</id>
+        
+        <content type="html" xml:base="https://tiff.engineer/blog/gurl-cli/">&lt;p&gt;Briefly: I am writing a CLI tool that fetches info from GitHub&#x27;s REST API as a wrapper around cURL.&lt;&#x2F;p&gt;
+&lt;p&gt;Why?&lt;&#x2F;p&gt;
+&lt;p&gt;Just to keep my finger on the pulse of software development and to practice my programming skills because believe it or not, being able to code as a cybersecurity professional is extremely useful, even though it isn&#x27;t &lt;em&gt;technically necessary&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m currently wading though documentation on Go modules and Go standard library packages, as well as reading other code examples to see how I want to structure my application.&lt;&#x2F;p&gt;
+&lt;p&gt;First, I found a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wick3dr0se&#x2F;github-api-curl&#x2F;tree&#x2F;master&quot;&gt;repo that&lt;&#x2F;a&gt; uses shell scripts to wrap around the GitHub API. This gave me the idea for splitting up my tool into different directories.&lt;&#x2F;p&gt;
+&lt;p&gt;Then, I fiddled around with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;go-github&#x2F;tree&#x2F;master&quot;&gt;Google&#x27;s GitHub Go library&lt;&#x2F;a&gt; to see how they used Go to build the library.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fits-and-starts&quot;&gt;Fits and Starts&lt;&#x2F;h2&gt;
+&lt;p&gt;My first inkling was to crib this code from the Google repo:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;go&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-go &quot;&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;var &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;defaultBaseURL &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;https:&#x2F;&#x2F;github.com&#x2F;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;&#x2F;&#x2F; Client is a GitHub scraping client.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;type &lt;&#x2F;span&gt;&lt;span&gt;Client &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;struct &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;http&lt;&#x2F;span&gt;&lt;span&gt;.Client
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;&#x2F;&#x2F; base URL for github.com pages.  Exposed primarily for testing.  Also
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;&#x2F;&#x2F; used for saving and restoring cookies on the Client.
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;baseURL &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;url&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;URL
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I wasn&#x27;t exactly sure what I was looking at; I have a &lt;code&gt;baseURL&lt;&#x2F;code&gt; variable that is assigned the GitHub url. I&#x27;ve imported the &lt;code&gt;net&#x2F;http&lt;&#x2F;code&gt; package, as it would have been in this example. We have a &lt;code&gt;Client&lt;&#x2F;code&gt; type that is also a &lt;code&gt;struct&lt;&#x2F;code&gt; which I have forgetten what they are exactly, as it has been a while since I&#x27;ve read the C++ docs, which also has a &lt;code&gt;struct&lt;&#x2F;code&gt; but I think that &lt;code&gt;struct&lt;&#x2F;code&gt; in this instance has the &lt;code&gt;type&lt;&#x2F;code&gt; keyword to denote that it is a &lt;code&gt;class&lt;&#x2F;code&gt; or something.&lt;&#x2F;p&gt;
+&lt;p&gt;In any case, I was trying to figure out how to use string interpolation in the URL parameters like you would in JavaScript template strings:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;&#x2F;&#x2F; Octokit.js
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;&#x2F;&#x2F; https:&#x2F;&#x2F;github.com&#x2F;octokit&#x2F;core.js#readme
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;octokit &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= new &lt;&#x2F;span&gt;&lt;span&gt;Octokit({
+&lt;&#x2F;span&gt;&lt;span&gt;  auth: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;YOUR-TOKEN&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;})
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;&#x2F;&#x2F; the request method contains template strings which is
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;&#x2F;&#x2F; JavaScript&amp;#39;s way of doing string interpolation
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;octokit&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61afef;&quot;&gt;request&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;GET &#x2F;repos&#x2F;{owner}&#x2F;{repo}&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;, {
+&lt;&#x2F;span&gt;&lt;span&gt;  owner: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;OWNER&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;  repo: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;REPO&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;  headers: {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;X-GitHub-Api-Version&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;2022-11-28&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;})
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;How does that work in Go?&lt;&#x2F;p&gt;
+&lt;p&gt;At first I was thinking of using &lt;code&gt;Stripln()&lt;&#x2F;code&gt; to do string interpolation but as a &lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;71181938&#x2F;3800146&quot;&gt;StackOverflow user said&lt;&#x2F;a&gt;, to put that junk in a query parameter would be messy and unsafe. The user suggested the op use the &lt;code&gt;net&#x2F;http&lt;&#x2F;code&gt; library which solves all the issues I&#x27;d face trying to make &lt;code&gt;GET&lt;&#x2F;code&gt; requests to GitHub&#x27;s REST API.&lt;&#x2F;p&gt;
+&lt;p&gt;The example given:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;go&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-go &quot;&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;params &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;:= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;url&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;Values&lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;page[size]&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;:        []&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;string&lt;&#x2F;span&gt;&lt;span&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;100&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;page[&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;key &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;]&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: []&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;string&lt;&#x2F;span&gt;&lt;span&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;1&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;u &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;:= &amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;url&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;URL&lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;Scheme&lt;&#x2F;span&gt;&lt;span&gt;:   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;https&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;Host&lt;&#x2F;span&gt;&lt;span&gt;:     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;url.com&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;Path&lt;&#x2F;span&gt;&lt;span&gt;:     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;&#x2F;path&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;RawQuery&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;params&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;Encode&lt;&#x2F;span&gt;&lt;span&gt;(),
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;req&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;err &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;:= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;http&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;NewRequest&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;GET&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;u&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt;(), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;nil&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This should do it for now.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Hello, Y&#x27;all</title>
+        <published>2024-03-17T00:00:00+00:00</published>
+        <updated>2024-03-17T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tiff.engineer/blog/hello-yall/"/>
+        <id>https://tiff.engineer/blog/hello-yall/</id>
+        
+        <content type="html" xml:base="https://tiff.engineer/blog/hello-yall/">&lt;p&gt;This is a learning and accountability blog. &lt;&#x2F;p&gt;
+&lt;p&gt;This is my first post. It will be updated as time permits.&lt;&#x2F;p&gt;
+&lt;p&gt;One of the things frustrating me lately is when I was just starting out, I blogged about literally everything; the industry was new to me and everyone was excited, I was excited at the possibility of pulling myself out of extreme poverty. I was younger, bright-eyed, without any cynicism.&lt;&#x2F;p&gt;
+&lt;p&gt;Fast forward 10 years and a lot has changed. I won&#x27;t get into the gory details but y&#x27;all know. Tech is not what it used to be, I&#x27;ve grown to despise most JavaScript anything, and I&#x27;m an industry vet who is disillusioned by the state of the industry and the world in general. That kind of pessimism weighs on me daily, so much so I don&#x27;t write about anything I learn. It sucks.&lt;&#x2F;p&gt;
+&lt;p&gt;So this is my blog post I&#x27;m sending you, I hope you read it. (Bonus points is you get that reference).&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

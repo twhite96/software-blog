@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="robots" content="index, follow">
+
+
+
+
+
+
+
+
+
+
+<title>gURL: A cURL Wrapper Written in Go</title>
+
+
+
+<meta name="title" content="gURL: A cURL Wrapper Written in Go">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tiff.engineer/blog/gurl-cli/">
+
+<meta property="og:site_name" content="">
+
+
+<meta property="og:title" content="gURL: A cURL Wrapper Written in Go">
+
+
+
+
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://tiff.engineer/blog/gurl-cli/">
+
+<meta property="twitter:title" content="gURL: A cURL Wrapper Written in Go">
+
+
+
+
+<link rel="canonical" href="https://tiff.engineer/blog/gurl-cli/">
+
+
+
+
+<link rel="alternate" type="application/atom+xml" title="RSS" href="https://tiff.engineer/atom.xml"> 
+
+
+
+<link rel="stylesheet" type="text/css" href="https://speyll.github.io/suCSS/reset-min.css"/>
+<link rel="stylesheet" type="text/css" href="https://speyll.github.io/suCSS/suCSS-min.css"/>
+<link rel="stylesheet" type="text/css" href="https://tiff.engineer/css/style.css"/>
+
+<script src="https://tiff.engineer/js/script.js" defer></script>
+
+
+</head>
+<body>
+      <header>
+          
+
+  
+
+
+  <nav id="nav-bar">
+    
+      <a href="&#x2F;" class="">
+        
+        &#x2F;home&#x2F;
+      </a>
+    
+      <a href="&#x2F;about" class="">
+        
+        &#x2F;about&#x2F;
+      </a>
+    
+      <a href="&#x2F;notes" class="">
+        
+        &#x2F;notes&#x2F;
+      </a>
+    
+      <a href="&#x2F;blog" class="">
+        
+        &#x2F;blog&#x2F;
+      </a>
+    
+    <div>
+      <input type="checkbox" id="theme-toggle" style="display: none;">
+      <label for="theme-toggle" id="theme-toggle-label"><svg id="theme-icon" class="icons"><use href="https://tiff.engineer/icons.svg#lightMode"></use></svg></label>
+      <audio style="display:none;" id="theme-sound">
+        <source src="https://tiff.engineer/click.ogg" type="audio/ogg">
+      </audio>
+    </div>
+  </nav>
+
+
+      </header>
+      <main>
+          
+<div><a href="..">..</a>/<span class="accent-data">gurl-cli</span></div>
+<time datetime="2024-03-24">Published on: <span class="accent-data">2024-03-24</span></time>
+
+<h1>gURL: A cURL Wrapper Written in Go</h1>
+
+
+
+<p>Briefly: I am writing a CLI tool that fetches info from GitHub's REST API as a wrapper around cURL.</p>
+<p>Why?</p>
+<p>Just to keep my finger on the pulse of software development and to practice my programming skills because believe it or not, being able to code as a cybersecurity professional is extremely useful, even though it isn't <em>technically necessary</em>.</p>
+<p>I'm currently wading though documentation on Go modules and Go standard library packages, as well as reading other code examples to see how I want to structure my application.</p>
+<p>First, I found a <a href="https://github.com/wick3dr0se/github-api-curl/tree/master">repo that</a> uses shell scripts to wrap around the GitHub API. This gave me the idea for splitting up my tool into different directories.</p>
+<p>Then, I fiddled around with <a href="https://github.com/google/go-github/tree/master">Google's GitHub Go library</a> to see how they used Go to build the library.</p>
+<h2 id="fits-and-starts">Fits and Starts</h2>
+<p>My first inkling was to crib this code from the Google repo:</p>
+<pre data-lang="go" style="background-color:#282c34;color:#dcdfe4;" class="language-go "><code class="language-go" data-lang="go"><span style="color:#c678dd;">var </span><span style="color:#e06c75;">defaultBaseURL </span><span style="color:#c678dd;">= </span><span style="color:#98c379;">&quot;https://github.com/&quot;
+</span><span>
+</span><span style="color:#5c6370;">// Client is a GitHub scraping client.
+</span><span style="color:#c678dd;">type </span><span>Client </span><span style="color:#c678dd;">struct </span><span>{
+</span><span>	</span><span style="color:#c678dd;">*</span><span style="color:#e06c75;">http</span><span>.Client
+</span><span>
+</span><span>	</span><span style="color:#5c6370;">// base URL for github.com pages.  Exposed primarily for testing.  Also
+</span><span>	</span><span style="color:#5c6370;">// used for saving and restoring cookies on the Client.
+</span><span>	</span><span style="color:#e06c75;">baseURL </span><span style="color:#c678dd;">*</span><span style="color:#e06c75;">url</span><span>.</span><span style="color:#c678dd;">URL
+</span><span>}
+</span></code></pre>
+<p>I wasn't exactly sure what I was looking at; I have a <code>baseURL</code> variable that is assigned the GitHub url. I've imported the <code>net/http</code> package, as it would have been in this example. We have a <code>Client</code> type that is also a <code>struct</code> which I have forgetten what they are exactly, as it has been a while since I've read the C++ docs, which also has a <code>struct</code> but I think that <code>struct</code> in this instance has the <code>type</code> keyword to denote that it is a <code>class</code> or something.</p>
+<p>In any case, I was trying to figure out how to use string interpolation in the URL parameters like you would in JavaScript template strings:</p>
+<pre data-lang="js" style="background-color:#282c34;color:#dcdfe4;" class="language-js "><code class="language-js" data-lang="js"><span style="color:#5c6370;">// Octokit.js
+</span><span style="color:#5c6370;">// https://github.com/octokit/core.js#readme
+</span><span style="color:#c678dd;">const </span><span style="color:#e06c75;">octokit </span><span style="color:#c678dd;">= new </span><span>Octokit({
+</span><span>  auth: </span><span style="color:#98c379;">&#39;YOUR-TOKEN&#39;
+</span><span>})
+</span><span>
+</span><span style="color:#5c6370;">// the request method contains template strings which is
+</span><span style="color:#5c6370;">// JavaScript&#39;s way of doing string interpolation
+</span><span>
+</span><span style="color:#c678dd;">await </span><span style="color:#e06c75;">octokit</span><span>.</span><span style="color:#61afef;">request</span><span>(</span><span style="color:#98c379;">&#39;GET /repos/{owner}/{repo}&#39;</span><span>, {
+</span><span>  owner: </span><span style="color:#98c379;">&#39;OWNER&#39;</span><span>,
+</span><span>  repo: </span><span style="color:#98c379;">&#39;REPO&#39;</span><span>,
+</span><span>  headers: {
+</span><span>    </span><span style="color:#98c379;">&#39;X-GitHub-Api-Version&#39;</span><span>: </span><span style="color:#98c379;">&#39;2022-11-28&#39;
+</span><span>  }
+</span><span>})
+</span></code></pre>
+<p>How does that work in Go?</p>
+<p>At first I was thinking of using <code>Stripln()</code> to do string interpolation but as a <a href="https://stackoverflow.com/a/71181938/3800146">StackOverflow user said</a>, to put that junk in a query parameter would be messy and unsafe. The user suggested the op use the <code>net/http</code> library which solves all the issues I'd face trying to make <code>GET</code> requests to GitHub's REST API.</p>
+<p>The example given:</p>
+<pre data-lang="go" style="background-color:#282c34;color:#dcdfe4;" class="language-go "><code class="language-go" data-lang="go"><span style="color:#e06c75;">params </span><span style="color:#c678dd;">:= </span><span style="color:#e06c75;">url</span><span>.</span><span style="color:#e06c75;">Values</span><span>{
+</span><span>    </span><span style="color:#98c379;">&quot;page[size]&quot;</span><span>:        []</span><span style="color:#c678dd;">string</span><span>{</span><span style="color:#98c379;">&quot;100&quot;</span><span>},
+</span><span>    </span><span style="color:#98c379;">&quot;page[&quot; </span><span style="color:#c678dd;">+ </span><span style="color:#e06c75;">key </span><span style="color:#c678dd;">+ </span><span style="color:#98c379;">&quot;]&quot;</span><span>: []</span><span style="color:#c678dd;">string</span><span>{</span><span style="color:#98c379;">&quot;1&quot;</span><span>},
+</span><span>}
+</span><span style="color:#e06c75;">u </span><span style="color:#c678dd;">:= &amp;</span><span style="color:#e06c75;">url</span><span>.</span><span style="color:#e06c75;">URL</span><span>{
+</span><span>    </span><span style="color:#e06c75;">Scheme</span><span>:   </span><span style="color:#98c379;">&quot;https&quot;</span><span>,
+</span><span>    </span><span style="color:#e06c75;">Host</span><span>:     </span><span style="color:#98c379;">&quot;url.com&quot;</span><span>,
+</span><span>    </span><span style="color:#e06c75;">Path</span><span>:     </span><span style="color:#98c379;">&quot;/path&quot;</span><span>,
+</span><span>    </span><span style="color:#e06c75;">RawQuery</span><span>: </span><span style="color:#e06c75;">params</span><span>.</span><span style="color:#e06c75;">Encode</span><span>(),
+</span><span>}
+</span><span style="color:#e06c75;">req</span><span>, </span><span style="color:#e06c75;">err </span><span style="color:#c678dd;">:= </span><span style="color:#e06c75;">http</span><span>.</span><span style="color:#e06c75;">NewRequest</span><span>(</span><span style="color:#98c379;">&quot;GET&quot;</span><span>, </span><span style="color:#e06c75;">u</span><span>.</span><span style="color:#e06c75;">String</span><span>(), </span><span style="color:#e5c07b;">nil</span><span>)
+</span></code></pre>
+<p>This should do it for now.</p>
+
+
+<p class="tags-data">
+  
+</p>
+
+      </main>
+      <footer>
+          <hr>
+<div id="footer-container">
+  
+  <div>
+    <p>Theme and color theme licensed under <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Licence_MIT">MIT</a>.<br>
+      Built with <a target="_blank" rel="noopener noreferrer" href="https://www.getzola.org">Zola</a> using <a target="_blank" rel="noopener noreferrer" href="https://github.com/Speyll/anemone">anemone</a> theme, <a target="_blank" rel="noopener noreferrer" href="https://speyll.github.io/suCSS/">suCSS</a> framework &amp; <a target="_blank" rel="noopener noreferrer" href="https://github.com/Speyll/veqev">veqev</a>.<br>
+    </p>
+
+  </div>
+  
+  <div>
+    <a class="no-style" target="_blank" rel="noopener noreferrer" href="https://tiff.engineer/atom.xml" title="Subscribe via RSS for updates."><svg class="icons"><use href="https://tiff.engineer/icons.svg#rss"></use></svg></a>
+  </div>
+  
+</div>
+
+      </footer>
+</body>
+</html>
