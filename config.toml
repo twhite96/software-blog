@@ -36,8 +36,8 @@ default_theme = "dark"
 
 header_nav = [
   { url = "/", name_en = "/home/" },
-  { url = "/about", name_en = "/about/" },
+  { url = "/blog", name_en = "/blog/" },
   { url = "/notes", name_en = "/notes/" },
-  { url = "/blog", name_en = "/blog/" }
+  { url = "/about", name_en = "/about/" }
 ]
 # Put all your custom variables here
