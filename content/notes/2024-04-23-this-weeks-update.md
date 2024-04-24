@@ -5,11 +5,11 @@ title = "This Week's Update"
 
 Things I have been up to while off LinkedIn:
 
-- Working on my home lab by setting up k3s for High Availabilty servers for critical services in the lab
-- Learning more about VMs, Nginx, and Reverse Proxies
-- Learning about Certbot
-- Failing to set up TWO "beginner-friendly" reverse proxy managers
-- Learning how to reconfigure Proxmox IP addresses, failing to keep the cluster, and wiping three nodes clean
+- Working on my [home lab](http://homelab.tifflabs.org) by setting up k3s for High Availabilty servers for critical services in the lab
+- Learning more about VMs, [Nginx](https://notes.0x8c.org/home-lab/nginx-configs/), and Reverse Proxies
+- Learning about [Certbot](https://certbot.eff.org/)
+- Failing to set up [TWO "beginner-friendly"](https://github.com/tobychui/zoraxy) [reverse proxy managers](https://nginxproxymanager.com/) and realizing that [learning how to use the CLI more](https://lemmy.brendan.ie/comment/223126) is the best course of action
+- Learning how to [reconfigure Proxmox IP addresses](https://gist.github.com/twhite96/2ed4c6f3d50ed0009947c69e7bded6ca), failing to keep the cluster, and wiping three nodes clean
 - Deciding that I'd keep one node out of the cluster for having one less entrypoint to my network[^1]
 - Setting up InfluxDB for use of monitoring my Proxmox cluster and separate node in Grafana
 - Learning Linux commands such as `fstab`, `lsblk`, and that you can pretty much do everything you need system wide (rebooting, etc), by prefixing `systemctl` to those commands
