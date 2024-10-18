@@ -1,7 +1,6 @@
 +++
-title = "blog"
-path = "blog"
+paginate_by = 15
+title = "All posts"
+sort_by = "date"
 page_template = "blog-page.html"
-insert_anchor_links = "left"
-weight = 0
 +++
