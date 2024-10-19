@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://tiff.engineer"
+base_url = "https://tiff.engineer/"
 title = "tiff's software blog"
 theme = "anemone"
 # Whether to automatically compile all Sass files in the sass directory
