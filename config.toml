@@ -31,7 +31,7 @@ list_pages = false
 twitter_card = true
 toc = true
 
-default_theme = ""
+default_theme = "light"
 # footer_content_license = true
 favicon = "favicon.ico"
 
@@ -45,4 +45,3 @@ header_nav = [
 
 footer_content_license = "Creative Commons Attribution 4.0 International"
 footer_content_license_link = "https://creativecommons.org/licenses/by/4.0/"
-
