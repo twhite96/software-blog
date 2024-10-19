@@ -36,7 +36,7 @@ toc = true
 #footer_content_license = true
 favicon = "favicon.ico"
 
-default_theme = "light"
+default_theme = ""
 
 header_nav = [
   { url = "/", name_en = "/home/" },
