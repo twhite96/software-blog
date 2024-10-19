@@ -1,8 +1,11 @@
-+++
-title = "tiff's software blog"
-path = "/"
-page_template = "page.html"
-+++
+---
+title: "tiff's software blog"
+page_template: "page.html"
+---
+
+## Overview
+
+A software blog by tiff.
 
 ## Why did you make another blog, tiff?
 
@@ -21,5 +24,5 @@ The deal for me is this: start small. You don't have to build [a compiler in Web
 
 ## Check out the latest blog posts:
 
-- [Hello Y'all](./blog/hello-yall/)
+- [Back Again](./blog/back-again/)
 - [gURL CLI](./blog/gurl-cli)

@@ -23,7 +23,4 @@ I've been at it nonstop these past two weeks, but I am having serious fun.
 
 
 
-
-
-
-[^1] I have too many VMs and LXCs now or I'd change the IP to help with this as well.
+[^1]: I have too many VMs and LXCs now or I'd change the IP to help with this as well.

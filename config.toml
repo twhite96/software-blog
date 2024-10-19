@@ -1,10 +1,11 @@
 # The URL the site will be built for
-base_url = "/"
-
+base_url = "https://tiff.engineer"
+title = "tiff's software blog"
 theme = "anemone"
 # Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
-generate_feed = true
+compile_sass = false
+minify_html = true
+generate_feeds = true
 default_language = "en"
 
 taxonomies = [
@@ -30,9 +31,11 @@ highlight_theme = "OneHalfDark"
 [extra]
 list_pages = false
 twitter_card = true
+toc = true
 
 default_theme = "dark"
-
+# footer_content_license = true
+favicon = "favicon.ico"
 
 header_nav = [
   { url = "/", name_en = "/home/" },
@@ -41,3 +44,6 @@ header_nav = [
   { url = "/about", name_en = "/about/" }
 ]
 # Put all your custom variables here
+
+footer_content_license = "Creative Commons Attribution 4.0 International"
+footer_content_license_link = "https://creativecommons.org/licenses/by/4.0/"
