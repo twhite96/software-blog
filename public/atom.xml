@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>tiff&#x27;s software blog</title>
+    <link rel="self" type="application/atom+xml" href="https://tiff.engineer/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://tiff.engineer/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-10-18T00:00:00+00:00</updated>
+    <id>https://tiff.engineer/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Back Again</title>
+        <published>2024-10-18T00:00:00+00:00</published>
+        <updated>2024-10-18T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tiff.engineer/blog/back-again/"/>
+        <id>https://tiff.engineer/blog/back-again/</id>
+        
+        <content type="html" xml:base="https://tiff.engineer/blog/back-again/">&lt;blockquote&gt;
+&lt;p&gt;This is going to be a brief post; I have not gathered my thoughts on my current career situation, however that will come.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;what-s-up&quot;&gt;What&#x27;s Up?&lt;&#x2F;h2&gt;
+&lt;p&gt;Well, I&#x27;ve given up on pivoting to cybersecurity. I have also given up on IT&#x2F;DevOps as a career. I will be talking about this
+more in another post somewhere else which I&#x27;ll link to, but it is what it is for me.&lt;&#x2F;p&gt;
+&lt;p&gt;This means I have more time to build software when I get a chance and for fun and for my next endeavour which means
+this blog is my main one for software dev for the foreseeable future.&lt;&#x2F;p&gt;
+&lt;p&gt;I am glad to consolidate things and pare things down to just this blog and my next endeavour &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tifflabs.org&quot;&gt;Tiff Labs&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-is-tiff-labs&quot;&gt;What is Tiff Labs?&lt;&#x2F;h2&gt;
+&lt;p&gt;First, I&#x27;ve quit trying to have a career in tech proper. It&#x27;s just not going to happen for someone my age during a recession
+like this. I don&#x27;t have a degree and am fully self-taught. This is a big strike against me returning to the workforce in tech and
+if I can&#x27;t do that, I will do my own thing. I have income from other sources to be able to do this so I am not too concerned about
+making ends meet for now.&lt;&#x2F;p&gt;
+&lt;p&gt;Tiff Labs is an umbrella of things- a YouTube channel, a blog, a smart home resource, and a homelab resource. I can make money from that once I get more content up and posted&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I will also be doing more DIY repairing of devices and DIY building of things in general. I enjoy working with my hands more than working with code. I love both, don&#x27;t get me wrong. However working with my hands gives me immense joy I don&#x27;t find while writing software.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-this-blog-will-be&quot;&gt;What this blog will be&lt;&#x2F;h2&gt;
+&lt;p&gt;It will be a place for me to talk about the software I build for my other projects and hopefully a small business at some point. That&#x27;s it.&lt;&#x2F;p&gt;
+&lt;p&gt;Here is a project I&#x27;d like to build in Go:&lt;&#x2F;p&gt;
+&lt;blockquote class=&quot;reddit-embed-bq&quot; data-embed-height=&quot;364&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;golang&#x2F;comments&#x2F;1e6cwgi&#x2F;comment&#x2F;lds2v63&#x2F;&quot;&gt;Comment&lt;&#x2F;a&gt;&lt;br&gt; by&lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;user&#x2F;TheBrownViking20&#x2F;&quot;&gt;u&#x2F;TheBrownViking20&lt;&#x2F;a&gt; from discussion&lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;golang&#x2F;comments&#x2F;1e6cwgi&#x2F;what_is_the_most_interesting_golang_cli_app_youve&#x2F;&quot;&gt;&lt;&#x2F;a&gt;&lt;br&gt; in&lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;golang&#x2F;&quot;&gt;golang&lt;&#x2F;a&gt;&lt;&#x2F;blockquote&gt;&lt;script async=&quot;&quot; src=&quot;https:&#x2F;&#x2F;embed.reddit.com&#x2F;widgets.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;&#x2F;script&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
+&lt;p&gt;I know that affiliate links are frowned upon but other than ads which I don&#x27;t want to run, this will have to do for now.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>How Experience Helped Me Stay on One Project as a Time</title>
+        <published>2024-09-15T00:00:00+00:00</published>
+        <updated>2024-09-15T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tiff.engineer/blog/experience-and-projects/"/>
+        <id>https://tiff.engineer/blog/experience-and-projects/</id>
+        
+        <content type="html" xml:base="https://tiff.engineer/blog/experience-and-projects/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>This Week&#x27;s Update</title>
+        <published>2024-04-23T00:00:00+00:00</published>
+        <updated>2024-04-23T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tiff.engineer/notes/this-weeks-update/"/>
+        <id>https://tiff.engineer/notes/this-weeks-update/</id>
+        
+        <content type="html" xml:base="https://tiff.engineer/notes/this-weeks-update/">&lt;p&gt;Things I have been up to while off LinkedIn:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Working on my &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;http:&#x2F;&#x2F;homelab.tifflabs.org&quot;&gt;home lab&lt;&#x2F;a&gt; by setting up k3s for High Availabilty servers for critical services in the lab&lt;&#x2F;li&gt;
+&lt;li&gt;Learning more about VMs, &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;notes.0x8c.org&#x2F;home-lab&#x2F;nginx-configs&#x2F;&quot;&gt;Nginx&lt;&#x2F;a&gt;, and Reverse Proxies&lt;&#x2F;li&gt;
+&lt;li&gt;Learning about &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;certbot.eff.org&#x2F;&quot;&gt;Certbot&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Failing to set up &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tobychui&#x2F;zoraxy&quot;&gt;TWO &quot;beginner-friendly&quot;&lt;&#x2F;a&gt; &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;nginxproxymanager.com&#x2F;&quot;&gt;reverse proxy managers&lt;&#x2F;a&gt; and realizing that &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;lemmy.brendan.ie&#x2F;comment&#x2F;223126&quot;&gt;learning how to use the CLI more&lt;&#x2F;a&gt; is the best course of action&lt;&#x2F;li&gt;
+&lt;li&gt;Learning how to &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;twhite96&#x2F;2ed4c6f3d50ed0009947c69e7bded6ca&quot;&gt;reconfigure Proxmox IP addresses&lt;&#x2F;a&gt;, failing to keep the cluster, and wiping three nodes clean&lt;&#x2F;li&gt;
+&lt;li&gt;Deciding that I&#x27;d keep one node out of the cluster for having one less entrypoint to my network&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Setting up InfluxDB for use of monitoring my Proxmox cluster and separate node in Grafana&lt;&#x2F;li&gt;
+&lt;li&gt;Learning Linux commands such as &lt;code&gt;fstab&lt;&#x2F;code&gt;, &lt;code&gt;lsblk&lt;&#x2F;code&gt;, and that you can pretty much do everything you need system wide (rebooting, etc), by prefixing &lt;code&gt;systemctl&lt;&#x2F;code&gt; to those commands&lt;&#x2F;li&gt;
+&lt;li&gt;Creating my own Docker image and container to fix a bug in a repo I want to use but want it to install dependencies and &quot;just work&quot;, as they say&lt;&#x2F;li&gt;
+&lt;li&gt;Installing a self-hosted Git client&#x2F;website&lt;&#x2F;li&gt;
+&lt;li&gt;Learning that &lt;code&gt;ini&lt;&#x2F;code&gt; files are basically the same as &lt;code&gt;toml&lt;&#x2F;code&gt; files&lt;&#x2F;li&gt;
+&lt;li&gt;Researching how to use WebSockets in Python or Go to understand how someone could use that to exploit a website&#x2F;machine by keeping the socket alive and using the website&#x2F;machine as a C2 server&lt;&#x2F;li&gt;
+&lt;li&gt;Working on creating my own C2 server&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I&#x27;ve been at it nonstop these past two weeks, but I am having serious fun.&lt;&#x2F;p&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
+&lt;p&gt;I have too many VMs and LXCs now or I&#x27;d change the IP to help with this as well.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Go Project Structure for gURL</title>
+        <published>2024-04-01T00:00:00+00:00</published>
+        <updated>2024-04-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tiff.engineer/notes/go-project-structure/"/>
+        <id>https://tiff.engineer/notes/go-project-structure/</id>
+        
+        <content type="html" xml:base="https://tiff.engineer/notes/go-project-structure/">&lt;p&gt;Over the past week I&#x27;ve been working on changing the structure of gURL.&lt;&#x2F;p&gt;
+&lt;p&gt;One of my old CodeNewbie friends on LinkedIn gave me a template to start from on GitHub called &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;golang-standards&#x2F;project-layout&quot;&gt;Standard Go Project Layout&lt;&#x2F;a&gt;. I intend to use this as a guide.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>gURL: A cURL Wrapper Written in Go</title>
+        <published>2024-03-24T00:00:00+00:00</published>
+        <updated>2024-03-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tiff.engineer/blog/gurl-cli/"/>
+        <id>https://tiff.engineer/blog/gurl-cli/</id>
+        
+        <content type="html" xml:base="https://tiff.engineer/blog/gurl-cli/">&lt;p&gt;Briefly: I am writing a CLI tool that fetches info from GitHub&#x27;s REST API as a wrapper around cURL.&lt;&#x2F;p&gt;
+&lt;p&gt;Why?&lt;&#x2F;p&gt;
+&lt;p&gt;Just to keep my finger on the pulse of software development and to practice my programming skills because believe it or not, being able to code as a cybersecurity professional is extremely useful, even though it isn&#x27;t &lt;em&gt;technically necessary&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m currently wading though documentation on Go modules and Go standard library packages, as well as reading other code examples to see how I want to structure my application.&lt;&#x2F;p&gt;
+&lt;p&gt;First, I found a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wick3dr0se&#x2F;github-api-curl&#x2F;tree&#x2F;master&quot;&gt;repo that&lt;&#x2F;a&gt; uses shell scripts to wrap around the GitHub API. This gave me the idea for splitting up my tool into different directories.&lt;&#x2F;p&gt;
+&lt;p&gt;Then, I fiddled around with &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;go-github&#x2F;tree&#x2F;master&quot;&gt;Google&#x27;s GitHub Go library&lt;&#x2F;a&gt; to see how they used Go to build the library.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fits-and-starts&quot;&gt;Fits and Starts&lt;&#x2F;h2&gt;
+&lt;p&gt;My first inkling was to crib this code from the Google repo:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;go&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-go &quot;&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;var &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;defaultBaseURL &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;https:&#x2F;&#x2F;github.com&#x2F;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;&#x2F;&#x2F; Client is a GitHub scraping client.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;type &lt;&#x2F;span&gt;&lt;span&gt;Client &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;struct &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;http&lt;&#x2F;span&gt;&lt;span&gt;.Client
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;&#x2F;&#x2F; base URL for github.com pages.  Exposed primarily for testing.  Also
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;&#x2F;&#x2F; used for saving and restoring cookies on the Client.
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;baseURL &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;url&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;URL
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I wasn&#x27;t exactly sure what I was looking at; I have a &lt;code&gt;baseURL&lt;&#x2F;code&gt; variable that is assigned the GitHub url. I&#x27;ve imported the &lt;code&gt;net&#x2F;http&lt;&#x2F;code&gt; package, as it would have been in this example. We have a &lt;code&gt;Client&lt;&#x2F;code&gt; type that is also a &lt;code&gt;struct&lt;&#x2F;code&gt; which I have forgetten what they are exactly, as it has been a while since I&#x27;ve read the C++ docs, which also has a &lt;code&gt;struct&lt;&#x2F;code&gt; but I think that &lt;code&gt;struct&lt;&#x2F;code&gt; in this instance has the &lt;code&gt;type&lt;&#x2F;code&gt; keyword to denote that it is a &lt;code&gt;class&lt;&#x2F;code&gt; or something.&lt;&#x2F;p&gt;
+&lt;p&gt;In any case, I was trying to figure out how to use string interpolation in the URL parameters like you would in JavaScript template strings:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;&#x2F;&#x2F; Octokit.js
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;&#x2F;&#x2F; https:&#x2F;&#x2F;github.com&#x2F;octokit&#x2F;core.js#readme
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;octokit &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= new &lt;&#x2F;span&gt;&lt;span&gt;Octokit({
+&lt;&#x2F;span&gt;&lt;span&gt;  auth: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;YOUR-TOKEN&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;})
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;&#x2F;&#x2F; the request method contains template strings which is
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;&#x2F;&#x2F; JavaScript&amp;#39;s way of doing string interpolation
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;octokit&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61afef;&quot;&gt;request&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;GET &#x2F;repos&#x2F;{owner}&#x2F;{repo}&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;, {
+&lt;&#x2F;span&gt;&lt;span&gt;  owner: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;OWNER&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;  repo: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;REPO&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;  headers: {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;X-GitHub-Api-Version&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;2022-11-28&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;})
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;How does that work in Go?&lt;&#x2F;p&gt;
+&lt;p&gt;At first I was thinking of using &lt;code&gt;Stripln()&lt;&#x2F;code&gt; to do string interpolation but as a &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;71181938&#x2F;3800146&quot;&gt;StackOverflow user said&lt;&#x2F;a&gt;, to put that junk in a query parameter would be messy and unsafe. The user suggested the op use the &lt;code&gt;net&#x2F;http&lt;&#x2F;code&gt; library which solves all the issues I&#x27;d face trying to make &lt;code&gt;GET&lt;&#x2F;code&gt; requests to GitHub&#x27;s REST API.&lt;&#x2F;p&gt;
+&lt;p&gt;The example given:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;go&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-go &quot;&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;params &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;:= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;url&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;Values&lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;page[size]&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;:        []&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;string&lt;&#x2F;span&gt;&lt;span&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;100&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;page[&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;key &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;]&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: []&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;string&lt;&#x2F;span&gt;&lt;span&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;1&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;u &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;:= &amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;url&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;URL&lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;Scheme&lt;&#x2F;span&gt;&lt;span&gt;:   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;https&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;Host&lt;&#x2F;span&gt;&lt;span&gt;:     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;url.com&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;Path&lt;&#x2F;span&gt;&lt;span&gt;:     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;&#x2F;path&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;RawQuery&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;params&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;Encode&lt;&#x2F;span&gt;&lt;span&gt;(),
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;req&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;err &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;:= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;http&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;NewRequest&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;GET&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;u&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt;(), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;nil&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This should do it for now.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Hello, Y&#x27;all</title>
+        <published>2024-03-17T00:00:00+00:00</published>
+        <updated>2024-03-17T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tiff.engineer/blog/hello-yall/"/>
+        <id>https://tiff.engineer/blog/hello-yall/</id>
+        
+        <content type="html" xml:base="https://tiff.engineer/blog/hello-yall/">&lt;p&gt;This is a learning and accountability blog.&lt;&#x2F;p&gt;
+&lt;p&gt;This is my first post. It will be updated as time permits.&lt;&#x2F;p&gt;
+&lt;p&gt;One of the things frustrating me lately is when I was just starting out, I blogged about literally everything; the industry was new to me and everyone was excited, I was excited at the possibility of pulling myself out of extreme poverty. I was younger, bright-eyed, without any cynicism.&lt;&#x2F;p&gt;
+&lt;p&gt;Fast forward 10 years and a lot has changed. I won&#x27;t get into the gory details but y&#x27;all know. Tech is not what it used to be, I&#x27;ve grown to despise most JavaScript anything, and I&#x27;m an industry vet who is disillusioned by the state of the industry and the world in general. That kind of pessimism weighs on me daily, so much so I don&#x27;t write about anything I learn. It sucks.&lt;&#x2F;p&gt;
+&lt;p&gt;So this is my blog post I&#x27;m sending you, I hope you read it. (Bonus points is you get that reference).&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
